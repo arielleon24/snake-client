@@ -15,10 +15,13 @@ const handleUserInput = ('data', key => {
     process.exit();
   } else if (key === 'w') {
     connection.write("Move: up")
+    connection.write("Say: daddy's home")
   } else if (key === 's') {
     connection.write("Move: down")
+    connection.write("Say: look at meeeeee!")
   } else if (key === "a") {
     connection.write("Move: left")
+    connection.write("Say: dudududududude")
   } else if (key === "d") {
     connection.write("Move: right") 
   }

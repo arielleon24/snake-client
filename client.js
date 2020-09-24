@@ -4,6 +4,8 @@ const connect = function() {
     host: '135.23.222.131',
     port: 50542
   });
+
+  let timer = 500
   // interpret incoming data as text
   // conn.on('don\'t mind me, Just Sneking')
   conn.setEncoding('utf8'); 
@@ -13,6 +15,15 @@ const connect = function() {
   conn.on('connect', () => {
     console.log('Don\'t mind me, just snekking');
     conn.write('Name: ARI');
+    setTimeout(function() { conn.write("Move: up")}, timer += 500)
+    setTimeout(function() { conn.write("Move: up")}, timer += 500)
+    setTimeout(function() { conn.write("Move: up")}, timer += 500)
+    setTimeout(function() { conn.write("Move: right")}, timer += 500)
+    setTimeout(function() { conn.write("Move: right")}, timer += 500)
+    setTimeout(function() { conn.write("Move: right")}, timer += 500)
+    setTimeout(function() { conn.write("Move: right")}, timer += 500)
+    setTimeout(function() { conn.write("Move: right")}, timer += 500)
+    
   }); // Why doesn't this write to the page???
 
   return conn;
